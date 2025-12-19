@@ -15,7 +15,7 @@ st.set_page_config(
     layout="wide",
 )
 
-st.title("Simple RAG Chatbot")
+st.title("RAG Chatbot")
 st.write(
     "Ask questions over your own documents using a minimal RAG pipeline "
     "(LangChain + Ollama + Chroma + Streamlit)."
@@ -42,7 +42,7 @@ if uploaded_files:
             f.write(file.getbuffer())
     st.sidebar.success("Files saved. Click 'Rebuild index' if needed.")
 
-rebuild = st.sidebar.button("🔁 Rebuild index")
+rebuild = st.sidebar.button("Rebuild index")
 
 # --- Build or load vector store ---
 
