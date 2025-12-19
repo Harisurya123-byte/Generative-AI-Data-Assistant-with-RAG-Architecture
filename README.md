@@ -50,14 +50,13 @@ No external API keys or cloud models are required.
 ollama pull llama3.2
 ollama pull nomic-embed-text
 
-text
 
 Check they are available:
 
 ollama list
 
 should show llama3.2:latest and nomic-embed-text:latest
-text
+
 
 ---
 
@@ -68,35 +67,22 @@ text
 git clone <your-repo-url>.git
 cd RAG_agent # or your repo folder name
 
-text
+
 
 ### 3.2. Create and activate a virtual environment
 
 python3 -m venv .venv
 source .venv/bin/activate # Windows: .venv\Scripts\activate
 
-text
+
 
 ### 3.3. Install dependencies
 
 `requirements.txt`:
 
-streamlit==1.39.0
-langchain==0.3.7
-langchain-community==0.3.7
-langchain-ollama==0.2.0
-chromadb==0.5.5
-pypdf==4.3.1
-tiktoken==0.8.0
-python-dotenv==1.0.1
-
-text
-
 Install:
 
 pip install -r requirements.txt
-
-text
 
 ---
 
@@ -108,8 +94,6 @@ text
 source .venv/bin/activate
 rm -rf chroma_db # optional: clear old index when changing models
 streamlit run app.py
-
-text
 
 3. In the browser (default `http://localhost:8501`):
 
@@ -149,8 +133,6 @@ chroma_db/
 .env
 data/
 
-text
-
 ### 5.2. Push to GitHub
 
 git init
@@ -159,8 +141,6 @@ git commit -m "Initial RAG app"
 git branch -M main
 git remote add origin <your-repo-url>
 git push -u origin main
-
-text
 
 ### 5.3. Create the Streamlit app
 
@@ -199,4 +179,4 @@ Deployment will install dependencies from `requirements.txt` and launch the app.
   - Check that you clicked **Rebuild index** after uploading files.  
   - Remove `chroma_db/` and restart to force a fresh index.
 
----
+
