@@ -10,12 +10,12 @@ from rag_utils import (
 )
 
 st.set_page_config(
-    page_title="Simple RAG Chatbot",
-    page_icon="💬",
+    page_title="RAG Chatbot",
+    page_icon="",
     layout="wide",
 )
 
-st.title("📚 Simple RAG Chatbot")
+st.title("Simple RAG Chatbot")
 st.write(
     "Ask questions over your own documents using a minimal RAG pipeline "
     "(LangChain + Ollama + Chroma + Streamlit)."
@@ -23,7 +23,7 @@ st.write(
 
 # --- Sidebar: document upload ---
 
-st.sidebar.header("📂 Documents")
+st.sidebar.header("Documents")
 st.sidebar.write("Upload PDFs or text files. They will be indexed locally.")
 
 uploaded_files = st.sidebar.file_uploader(
@@ -64,7 +64,7 @@ if "rag_chain" not in st.session_state or rebuild:
 
 # --- Chat interface ---
 
-st.subheader("💬 Chat with your documents")
+st.subheader("Chat with your documents")
 
 if "messages" not in st.session_state:
     st.session_state.messages = []
